@@ -11,6 +11,14 @@ public class LinkedListTest {
         LinkedList<Integer> linkedList = new LinkedList<>();
         assertTrue(linkedList.isEmpty());
     }
+    @Test
+    public void testAppendToEmpty(){
+        LinkedList<Integer>linkedList = new LinkedList<>();
+        linkedList.append(new Integer(4));
+        assertFalse(linkedList.isEmpty());
+        assertEquals(1, linkedList.size());
+        assertEquals(linkedList.endNode,linkedList.end());
+    }
 
     @Test
     public void testNewEmptyListIsZeroSize() {
@@ -23,6 +31,7 @@ public class LinkedListTest {
         Integer i14 = 14;
         LinkedList<Integer> linkedList = new LinkedList<>(i14);
         assertFalse(linkedList.isEmpty());
+        assertEquals(linkedList.endNode,linkedList.end());
     }
 
     @Test
@@ -32,6 +41,7 @@ public class LinkedListTest {
         LinkedList<Integer> linkedList = new LinkedList<>(i12);
         linkedList.insert(j37);
         assertEquals(2, linkedList.size());
+        assertEquals(linkedList.endNode,linkedList.end());
     }
 
     @Test
@@ -41,6 +51,7 @@ public class LinkedListTest {
         LinkedList<Integer> linkedList = new LinkedList<>(i12);
         linkedList.append(j37);
         assertEquals(2, linkedList.size());
+        assertEquals(linkedList.endNode,linkedList.end());
     }
 
     @Test
@@ -62,6 +73,7 @@ public class LinkedListTest {
         assertEquals(j37, first);
         Double second = linkedList.get(1);
         assertEquals(i12, second);
+        assertEquals(linkedList.endNode,linkedList.end());
     }
 
     @Test
@@ -74,6 +86,7 @@ public class LinkedListTest {
         assertEquals(i12, first);
         Integer second = linkedList.get(1);
         assertEquals(j37, second);
+        assertEquals(linkedList.endNode,linkedList.end());
     }
 
     @Test
@@ -89,6 +102,7 @@ public class LinkedListTest {
         assertEquals(2, linkedList.size());
         assertEquals(jimmy, linkedList.get(0));
         assertEquals(bob, linkedList.get(1));
+        assertEquals(linkedList.endNode,linkedList.end());
     }
 
     @Test
@@ -103,6 +117,7 @@ public class LinkedListTest {
         assertEquals(j37, actualInteger);
         assertEquals(2, linkedList.size());
         assertEquals(k34, linkedList.get(0));
+        assertEquals(linkedList.endNode,linkedList.end());
     }
 
     @Test
@@ -117,6 +132,7 @@ public class LinkedListTest {
         assertEquals(i12, actualInteger);
         assertEquals(2, linkedList.size());
         assertEquals(k34, linkedList.get(0));
+        assertEquals(linkedList.endNode,linkedList.end());
     }
 
     @Test
@@ -129,5 +145,6 @@ public class LinkedListTest {
         assertEquals(i12, actualInteger);
         assertEquals(1, linkedList.size());
         assertEquals(j37, linkedList.get(0));
+        assertEquals(linkedList.endNode,linkedList.end());
     }
 }

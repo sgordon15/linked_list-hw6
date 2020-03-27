@@ -6,6 +6,7 @@ public class Queue<T> {
     private LinkedList<T> list = new LinkedList<>();
 
     public boolean isEmpty(){
+
         return list.isEmpty();
     }
 
@@ -14,11 +15,12 @@ public class Queue<T> {
     }
 
     public void enqueue(T obj) {
-        //TODO: Implement
+        //list.insert(obj);
+        list.append(obj);
     }
 
     public T dequeue() {
-        //TODO: Implement
-        return null;
+        return list.remove(0);
+        //return list.remove(list.size()-1);
     }
 }

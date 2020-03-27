@@ -16,7 +16,7 @@ public class Stack<T> {
 
     public T pop() {
         T retval;
-        retval = list.get(0);
+        retval = list.remove(0);
         return retval;
     }
 
